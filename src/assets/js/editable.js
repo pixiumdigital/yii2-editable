@@ -223,20 +223,27 @@
                                 if ($h.raise($el, 'editableSuccess', [$input.val(), $form, data, status, jqXHR])) {
                                     $loading.hide();
                                     if ($h.isEmpty(out)) {
+                                        console.log("hisempty");
                                         out = self.valueIfNull;
 
                                     } else {
                                         if (displayValueConfig[out] !== undefined) {
                                             out = displayValueConfig[out];
                                         }
+                                        console.log("displayvalue");
+
                                     }
                                     if (notActiveForm) {
+                                        console.log("not active form");
+
                                         $parent2.find('.help-block').remove();
                                         $parent2.removeClass('has-error');
                                         $message.html('');
                                         self.toggle(false);
                                         self.$value.html(out);
                                     } else {
+                                        console.log("active form");
+
                                         $parent.removeClass('has-error');
                                         $message.html('');
                                         self.toggle(false);
