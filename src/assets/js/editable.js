@@ -222,29 +222,21 @@
                             if ($h.isEmpty(chkError)) {
                                 if ($h.raise($el, 'editableSuccess', [$input.val(), $form, data, status, jqXHR])) {
                                     $loading.hide();
-                                    console.log("onSuccess");
                                     if ($h.isEmpty(out)) {
                                         out = self.valueIfNull;
-                                        console.log("hisempty");
 
                                     } else {
                                         if (displayValueConfig[out] !== undefined) {
                                             out = displayValueConfig[out];
-                                            console.log("valueconfig not undefined");
-
                                         }
                                     }
                                     if (notActiveForm) {
-                                        console.log("not active form");
-
                                         $parent2.find('.help-block').remove();
                                         $parent2.removeClass('has-error');
                                         $message.html('');
                                         self.toggle(false);
                                         self.$value.html(out);
                                     } else {
-                                        console.log("active form");
-
                                         $parent.removeClass('has-error');
                                         $message.html('');
                                         self.toggle(false);
