@@ -222,6 +222,7 @@
                             if ($h.isEmpty(chkError)) {
                                 if ($h.raise($el, 'editableSuccess', [$input.val(), $form, data, status, jqXHR])) {
                                     $loading.hide();
+                                    self.actions.closeClick();
                                     if ($h.isEmpty(out)) {
                                         out = self.valueIfNull;
                                     } else {
@@ -270,6 +271,7 @@
             };
         },
         htmlEncode: function (data) {
+            console.log(data);
             var self = this;
             if (!self.encodeOutput) {
                 return data;
