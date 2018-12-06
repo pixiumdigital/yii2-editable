@@ -154,6 +154,8 @@
                 },
                 submitClick: function () {
                     var $wrapper = self.asPopover ? $cont : $inline, hasFiles = false, settings;
+                    console.log("noob");
+
                     $h.addCss($wrapper, 'kv-editable-processing');
                     $loading.show();
                     $hasEditable.val(1);
