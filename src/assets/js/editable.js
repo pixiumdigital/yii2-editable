@@ -222,7 +222,7 @@
                             if ($h.isEmpty(chkError)) {
                                 if ($h.raise($el, 'editableSuccess', [$input.val(), $form, data, status, jqXHR])) {
                                     $loading.hide();
-                                    self.actions.closeClick();
+
                                     if ($h.isEmpty(out)) {
                                         out = self.valueIfNull;
                                     } else {
@@ -246,6 +246,7 @@
                                             $form.yiiActiveForm(objActiveForm.attributes, objActiveForm.settings);
                                         }
                                     }
+                                    self.toggle(false);
                                 }
                             } else {
                                 $h.raise($el, 'editableError', [$input.val(), $form, data]);
