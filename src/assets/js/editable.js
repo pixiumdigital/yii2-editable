@@ -279,7 +279,6 @@
             };
         },
         htmlEncode: function (data) {
-            console.log(data);
             var self = this;
             if (!self.encodeOutput) {
                 return data;
